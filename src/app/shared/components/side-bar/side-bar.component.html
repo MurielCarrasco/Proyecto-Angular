@@ -1,0 +1,33 @@
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side" [opened]="showSidebar">
+    <mat-list role="list" style="width:240px;">
+      <mat-list-item role="listitem" [routerLink]="['/board']">
+        <mat-icon matListItemIcon>dashboard</mat-icon>
+        <div matListItemTitle>Opciones</div>
+      </mat-list-item>
+      <mat-list-item role="listitem" [routerLink]="['/students']">
+        <mat-icon matListItemIcon>people</mat-icon>
+        <div matListItemTitle>Estudiantes</div>
+      </mat-list-item>
+      <mat-list-item role="listitem" [routerLink]="['/courses']">
+        <mat-icon matListItemIcon>book</mat-icon>
+        <div matListItemTitle>Cursos</div>
+      </mat-list-item>
+      <mat-list-item role="listitem" [routerLink]="['/enrollmentsen']">
+        <mat-icon matListItemIcon>reorder</mat-icon>
+        <div matListItemTitle>Inscripciones</div>
+      </mat-list-item>
+      <mat-list-item role="listitem" [routerLink]="['/reports']">
+        <mat-icon matListItemIcon>folder</mat-icon>
+        <div matListItemTitle>Archivos</div>
+      </mat-list-item>
+      <mat-list-item role="listitem" (click)="logout()">
+        <mat-icon matListItemIcon>exit_to_app</mat-icon>
+        <div matListItemTitle>Cerrar Sesión</div>
+      </mat-list-item>
+    </mat-list>
+  </mat-drawer>
+  <main>
+    <ng-content></ng-content>
+  </main>
+</mat-drawer-container>
